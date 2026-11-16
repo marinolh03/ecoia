@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EcoIA – Identificador de recicláveis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>EcoIA</h1>
+  <p class="sub">Tire uma foto e descubra se o objeto é reciclável.</p>
+  <div id="frame">A foto aparece aqui.</div>
+  <label class="btn" id="take" for="cam" style="opacity:.45;pointer-events:none">Tirar foto</label>
+  <input id="cam" type="file" accept="image/*" capture="environment">
+  <section id="out" aria-live="polite">
+    <p id="label"></p>
+    <p id="hint"></p>
+    <div id="bars"></div>
+    <button class="btn alt" id="speak" type="button">Falar resultado</button>
+  </section>
+  <p id="status">Carregando modelo…</p>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.4/dist/teachablemachine-image.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
